@@ -1,0 +1,284 @@
+/* basic styles  for whole page */
+
+:root {
+  box-sizing: border-box;
+  font-size: calc(1vw + 0.6em);
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 35em;) {
+  :root {
+    font-size: 1.125em;
+  }
+}
+
+@media (min-width: 50em) {
+  :root {
+    font-size: 1em;
+  }
+}
+
+img {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+/*container styles for padding and text align */
+
+.container {
+  padding: 1em;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header{
+  
+}
+
+
+.head {
+  display:flex;
+  justify-content: space-between;
+ 
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+.slogan {
+  font-size: 0.9em;
+  color: rgb(110, 108, 108);
+  margin-top: 0.7em;
+}
+/*menu button  and navigation*/
+.menu-toggle-button{
+  padding-top:1.3em;
+}
+.line {
+  width: 2.3em;
+  height: .3em;
+  background-color: black;
+  margin: .4em 0;
+  border-radius: .5em;
+  
+}
+.main-menu{
+  display:flex;
+  width:100%;
+}
+
+
+.main-menu >li >a{
+  text-decoration: none;
+  background-color: black;
+  color:white;
+
+  padding:.5em 1.5em;
+
+}
+.main-menu >li > a:hover{
+  background-color: rgb(226, 226, 226);
+  color:black;
+  padding:1em;
+}
+
+
+
+
+
+.navigation {
+  display: none;
+  background-color: black;
+  margin-bottom:0;
+}
+
+@media (min-width:35em){
+
+  .navigation{
+    display:flex;
+  }
+ 
+
+  .navigation .main-menu{
+    display: flex;
+    
+
+    list-style: none;
+  }
+
+
+
+
+
+
+  .menu-toggle-button {
+    display: none;
+  }
+}
+
+/* banner image and everything in the img  */
+
+.banner {
+  background-image: url(img/banner.jpg);
+  background-size: 100%;
+  background-position: center;
+  margin-top:0;
+
+  
+
+  text-align: center;
+  color: white;
+}
+
+.shade {
+  height: 100%;
+  width: 100%;
+  padding: 1.3em 0;
+  background-color: rgba(0, 0, 0, 0.363);
+  color: white;
+}
+
+.contact {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5em 1.5em;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.contact:hover{
+  background-color: rgba(219, 218, 219, 0.514);
+}
+
+
+@media (min-width: 35em) {
+  .shade {
+    padding: 4em 0;
+  }
+}
+
+@media (min-width: 50em) {
+  .shade {
+    padding: 6em 0;
+  }
+}
+
+/*about me section */
+.for-grid {
+  display: grid;
+  padding: 0 0 1em 0;
+}
+.highlight {
+  background-color: black;
+  color: white;
+  padding: 0.5em 0.5em;
+  margin: 0;
+}
+
+.my-pic {
+  max-width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .for-grid {
+    display: grid;
+    grid-template-columns: 1fr 11em;
+    grid-template-areas: "title img" "high img" "texta img ";
+    grid-column-gap: 2em;
+  }
+
+  .title {
+    grid-area: title;
+    font-size: 2em;
+  }
+
+  .highlight {
+    grid-area: high;
+  }
+  .text {
+    grid-area: texta;
+  }
+
+  .my-pic {
+    grid-area: img;
+    max-width: 10em;
+  }
+}
+
+/* what i can do */
+.box {
+  text-align: center;
+}
+.box > img {
+  max-width: 17em;
+}
+
+@media (min-width: 35em) {
+  .boxes {
+    margin: 2em 0;
+    display: flex;
+  }
+
+  .box {
+    text-align: center;
+  }
+  .box + .box {
+    padding-left: 1em;
+  }
+  .box > img {
+    max-width: 10em;
+  }
+}
+
+/*my projects */
+
+.projects {
+  background-color: black;
+}
+.project-grid > a > img {
+  max-width: 100%;
+}
+.projects > .container > h1 {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+@media(min-width:800px){
+    .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 0.5em;
+  }
+.project-grid > a > img {
+  max-width: 100%;
+}
+
+
+@media (min-width: 1080px) {
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+  }
+
+  .project-grid > a > img {
+    max-width: 22em;
+  }
+}
