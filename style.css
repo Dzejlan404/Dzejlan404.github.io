@@ -16,7 +16,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (min-width: 35em;) {
+@media (min-width: 35em) {
   :root {
     font-size: 1.125em;
   }
@@ -43,15 +43,9 @@ img {
 
 /* header */
 
-.header{
-  
-}
-
-
 .head {
-  display:flex;
+  display: flex;
   justify-content: space-between;
- 
 }
 
 .logo {
@@ -63,66 +57,89 @@ img {
   color: rgb(110, 108, 108);
   margin-top: 0.7em;
 }
-/*menu button  and navigation*/
-.menu-toggle-button{
-  padding-top:1.3em;
+/*menu button */
+.menu-toggle-button {
+  padding-top: 1.3em;
 }
 .line {
   width: 2.3em;
-  height: .3em;
+  height: 0.3em;
   background-color: black;
-  margin: .4em 0;
-  border-radius: .5em;
-  
+  margin: 0.4em 0;
+  border-radius: 0.5em;
 }
-.main-menu{
-  display:flex;
-  width:100%;
-}
-
-
-.main-menu >li >a{
-  text-decoration: none;
-  background-color: black;
-  color:white;
-
-  padding:.5em 1.5em;
-
-}
-.main-menu >li > a:hover{
-  background-color: rgb(226, 226, 226);
-  color:black;
-  padding:1em;
-}
-
-
-
-
+/*navigation */
 
 .navigation {
   display: none;
   background-color: black;
-  margin-bottom:0;
+  margin-bottom: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  transition: height 0.3s;
 }
 
-@media (min-width:35em){
+.navigation.is-open {
+  display: block;
+}
 
-  .navigation{
-    display:flex;
-  }
- 
+.main-menu {
+  color: #fff;
 
-  .navigation .main-menu{
+  list-style: none;
+
+  border: 1px solid #fff;
+
+  text-align: center;
+
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu > li > a {
+  display: block;
+  padding: 0.8em 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.main-menu > li + li {
+  border-top: 1px solid #fff;
+}
+
+@media (min-width: 35em) {
+  .navigation {
     display: flex;
-    
+    justify-content: center;
+  }
+
+  .navigation .main-menu {
+    display: flex;
+    text-align: center;
+
+    border: none;
 
     list-style: none;
   }
 
+  .main-menu > li + li {
+    border: none;
+  }
 
+  .main-menu > li > a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
 
+    padding: 1.5em 3em;
+  }
 
-
+  .main-menu > li > a:hover {
+    background-color: rgb(226, 226, 226);
+    color: black;
+  }
 
   .menu-toggle-button {
     display: none;
@@ -135,9 +152,7 @@ img {
   background-image: url(img/banner.jpg);
   background-size: 100%;
   background-position: center;
-  margin-top:0;
-
-  
+  margin-top: 0;
 
   text-align: center;
   color: white;
@@ -160,10 +175,9 @@ img {
   font-size: 1em;
 }
 
-.contact:hover{
+.contact:hover {
   background-color: rgba(219, 218, 219, 0.514);
 }
-
 
 @media (min-width: 35em) {
   .shade {
@@ -183,28 +197,45 @@ img {
   padding: 0 0 1em 0;
 }
 .highlight {
+  position: relative;
+  left: -2em;
+  width: calc(100% + 4em);
+  z-index: 0;
+
   background-color: black;
   color: white;
-  padding: 0.5em 0.5em;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 13em;
   margin: 0;
+
+  font-size: 1.2em;
+  font-weight: normal;
 }
 
 .my-pic {
   max-width: 100%;
   justify-content: center;
+  z-index: 10;
 }
 
 @media (min-width: 600px) {
   .for-grid {
     display: grid;
     grid-template-columns: 1fr 11em;
-    grid-template-areas: "title img" "high img" "texta img ";
+    grid-template-areas:
+      "title img"
+      "high img"
+      "texta img "
+      "texta2 img";
     grid-column-gap: 2em;
   }
 
   .title {
     grid-area: title;
-    font-size: 2em;
+    font-size: 1.3em;
   }
 
   .highlight {
@@ -213,10 +244,13 @@ img {
   .text {
     grid-area: texta;
   }
+  .text2 {
+    grid-area: texta2;
+  }
 
   .my-pic {
     grid-area: img;
-    max-width: 10em;
+    max-width: 12em;
   }
 }
 
@@ -260,16 +294,16 @@ img {
   font-weight: normal;
 }
 
-@media(min-width:800px){
-    .project-grid {
+@media (min-width: 800px) {
+  .project-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 0.5em;
   }
-.project-grid > a > img {
-  max-width: 100%;
+  .project-grid > a > img {
+    max-width: 100%;
+  }
 }
-
 
 @media (min-width: 1080px) {
   .project-grid {
@@ -281,4 +315,33 @@ img {
   .project-grid > a > img {
     max-width: 22em;
   }
+}
+
+/*decoration boxes */
+
+.decoration {
+  display: none;
+}
+
+@media (min-width: 50em) {
+  .decoration {
+    display: block;
+  }
+  .boxes {
+    display: flex;
+    justify-content: center;
+  }
+
+  .box + .box {
+    margin-left: 6em;
+  }
+}
+
+/*footer */
+
+.footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: black;
+  color: white;
 }

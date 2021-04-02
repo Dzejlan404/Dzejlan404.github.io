@@ -20,25 +20,25 @@
                         <div class="slogan"> Designs for you need</div>
                     </div>
 
-                    <div class="menu-toggle-button">
+                    <div class="menu-toggle-button" id="div-js">
                         <div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
                 </div>
 
-                
-            
         </div>
-        <div class="  navigation">
-            <div class="container">
-                <ul class="main-menu">
-                    <li><a class="test"href="#home">Home</a></li>
+
+        <div class="  navigation" id="main-menu">
+            
+                <ul class="main-menu" >
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#aobut">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            
         </div>
+    
     </section>
 
 
@@ -70,9 +70,11 @@
                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore minima
                     ullam itaque adipisci consequatur numquam earum, non nisi illum vel quis 
                     accusantium, inventore rem impedit veritatis sapiente nihil assumenda 
-                    eligendi quo possimus officia atque, error expedita dolorem. Corrupti, 
-                    dicta sequi possimus at nobis suscipit totam nemo laboriosam,
                     laudantium, iusto tempora?</p>
+
+                <p class="text2"> Lorem ipsum dolor sit, amet consectetur adipisicing 
+                    elit. Pariatur quasi nobis ipsum ut impedit non, error fugažć
+                     aperiam doloribus velit nam quam officiis. Eaque, eum!</p>
 
                 <img src="img/me.jpg" alt="My pic" class="my-pic">
             
@@ -105,27 +107,49 @@
 
 <!-- /My work and projects  -->
 
+
+
+
+<!-- Contact info  -->
+<section class="contact-info">
+    <div class="container">
+        <h1>Interested in my work ? </h1>
+        <h1>Want to hire me ?</h1>
+        <p>Contact me at <span>r.dzejlan@gmail.com</span> </p>
+        <p>You can contact me trough social media as well
+            <a target="_blank" href="https://www.facebook.com/dzejlan.rahmanovic.7/">
+                <span class="fa fa-facebook"></span>
+                Džejlan Rahmanovic
+            </a>
+            <a target="_blank" href="https://www.instagram.com/florescentan/">
+                <span class="fa fa-instagram"></span>
+                Džejlan Rahmanovic
+            </a>
+        </p>
+       
+
+    </div>
+</section>
+
+
+<!-- /Contact info  -->
+
+
 <!-- Decoration with html css and javascript  -->
 <section class="decoration">
     <div class="container">
         <div class=" boxes">
             <div class="box">
                 <img src="img/html.png" alt="logo">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Placeat maxime inventoreincidunt aspernatur minus,
-                    ipsa culpa cum rerum facere dolore.</p>
+                
             </div>
             <div class="box">
                 <img src="img/css.png" alt="logo">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Placeat maxime inventoreincidunt aspernatur minus,
-                    ipsa culpa cum rerum facere dolore.</p>
+                
             </div>
             <div class="box">
                 <img src="img/js.png" alt="logo">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Placeat maxime inventoreincidunt aspernatur minus,
-                    ipsa culpa cum rerum facere dolore.</p>
+                
             </div>
 
         </div> <!-- end boxes  -->
@@ -136,42 +160,33 @@
 <!-- End of decoration -->
 
 
-<!-- Contact info  -->
-<section class="contact-info">
-    <div class="container">
-        <p>Interested in my work ? </p>
-        <p>Want to hire me ?</p>
-        <p>Contact me at <span>r.dzejlan@gmail.com</span> </p>
-        <p>You can contact me trough social media as well </p>
-        <a target="_blank" href="https://www.facebook.com/dzejlan.rahmanovic.7/"> 
-            <span class="fa fa-facebook"></span> 
-            Džejlan Rahmanovic
-        </a>
-        <a target="_blank" href="https://www.instagram.com/florescentan/">
-            <span class="fa fa-instagram"></span>
-            Džejlan Rahmanovic
-        </a>
-
-    </div>
-</section>
-
-
-<!-- /Contact info  -->
-
-
-
-
 <!-- Foooter -->
 <section class="footer">
+    <div class="container">
     <footer>Copyright Dzejlan Rahmanovic 21 &copy;</footer>
+    </div>
 </section>
 <!-- /Footer end  -->
 
 
+<div class="modal"></div>
+
+
+
+
 
 <!-- Javascript  -->
-<script>
 
+<script type="text/javascript">
+        (function () {
+ var div = document.getElementById('div-js');
+ div.addEventListener('click', function(event) {
+            event.preventDefault();
+ var menu = document.getElementById('main-menu');
+ menu.classList.toggle('is-open');
+ });
+})();
+</script>
 
 
 </script>
