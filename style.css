@@ -1,347 +1,165 @@
-/* basic styles  for whole page */
-
-:root {
-  box-sizing: border-box;
-  font-size: calc(1vw + 0.6em);
-}
-
-::before,
-::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@media (min-width: 35em) {
-  :root {
-    font-size: 1.125em;
+/* Full-screen background styling */
+body, html {
+    background: url('1.jpeg') no-repeat center center/cover;
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    
   }
-}
-
-@media (min-width: 50em) {
-  :root {
-    font-size: 1em;
-  }
-}
-
-img {
-  max-width: 95vw;
-  margin: 0 auto;
-}
-
-/*container styles for padding and text align */
-
-.container {
-  padding: 1em;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-/* header */
-
-.head {
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 2em;
-  font-weight: bold;
-}
-.slogan {
-  font-size: 0.9em;
-  color: rgb(110, 108, 108);
-  margin-top: 0.7em;
-}
-/*menu button */
-.menu-toggle-button {
-  padding-top: 1.3em;
-}
-.line {
-  width: 2.3em;
-  height: 0.3em;
-  background-color: black;
-  margin: 0.4em 0;
-  border-radius: 0.5em;
-}
-/*navigation */
-
-.navigation {
-  display: none;
-  background-color: black;
-  margin-bottom: 0;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  left: 0;
-  transition: height 0.3s;
-}
-
-.navigation.is-open {
-  display: block;
-}
-
-.main-menu {
-  color: #fff;
-
-  list-style: none;
-
-  border: 1px solid #fff;
-
-  text-align: center;
-
-  padding: 0;
-  margin: 0;
-}
-
-.main-menu > li > a {
-  display: block;
-  padding: 0.8em 1em;
-  text-decoration: none;
-  color: white;
-}
-
-.main-menu > li + li {
-  border-top: 1px solid #fff;
-}
-
-@media (min-width: 35em) {
-  .navigation {
+  body {
     display: flex;
+    flex-direction: column;
+  }
+  .container {
+    flex: 1; /* Makes the main content area grow and push the footer down */
+  }
+  
+  /* Hero section background image */
+  .hero-section {
+    
+    height: 70vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    position: relative;
+    margin: 3rem;
   }
-
-  .navigation .main-menu {
-    display: flex;
-    text-align: center;
-
-    border: none;
-
-    list-style: none;
+  
+  /* Hero content styling */
+  .hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
   }
-
-  .main-menu > li + li {
-    border: none;
+  
+  .hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
   }
-
-  .main-menu > li > a {
-    text-decoration: none;
-    background-color: black;
+  
+  .info-section {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+  }
+  
+  .highlight-text {
+    font-size: 1.8rem;
+    color: #33cc33;
+    font-weight: bold;
+  }
+  
+  .info-section p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  /* Footer */
+  .footer {
+    
     color: white;
-
-    padding: 1.5em 3em;
-  }
-
-  .main-menu > li > a:hover {
-    background-color: rgb(226, 226, 226);
-    color: black;
-  }
-
-  .menu-toggle-button {
-    display: none;
-  }
-}
-
-/* banner image and everything in the img  */
-
-.banner {
-  background-image: url(img/banner.jpg);
-  background-size: 100%;
-  background-position: center;
-  margin-top: 0;
-
-  text-align: center;
-  color: white;
-}
-
-.shade {
-  height: 100%;
-  width: 100%;
-  padding: 1.3em 0;
-  background-color: rgba(0, 0, 0, 0.363);
-  color: white;
-}
-
-.contact {
-  background-color: black;
-  color: white;
-  border: 1px solid white;
-  padding: 0.5em 1.5em;
-  margin-top: 1em;
-  font-size: 1em;
-}
-
-.contact:hover {
-  background-color: rgba(219, 218, 219, 0.514);
-}
-
-@media (min-width: 35em) {
-  .shade {
-    padding: 4em 0;
-  }
-}
-
-@media (min-width: 50em) {
-  .shade {
-    padding: 6em 0;
-  }
-}
-
-/*about me section */
-.for-grid {
-  display: grid;
-  padding: 0 0 1em 0;
-}
-.highlight {
-  position: relative;
-  left: -2em;
-  width: calc(100% + 4em);
-  z-index: 0;
-
-  background-color: black;
-  color: white;
-
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 2em;
-  padding-right: 13em;
-  margin: 0;
-
-  font-size: 1.2em;
-  font-weight: normal;
-}
-
-.my-pic {
-  max-width: 100%;
-  justify-content: center;
-  z-index: 10;
-}
-
-@media (min-width: 600px) {
-  .for-grid {
-    display: grid;
-    grid-template-columns: 1fr 11em;
-    grid-template-areas:
-      "title img"
-      "high img"
-      "texta img "
-      "texta2 img";
-    grid-column-gap: 2em;
-  }
-
-  .title {
-    grid-area: title;
-    font-size: 1.3em;
-  }
-
-  .highlight {
-    grid-area: high;
-  }
-  .text {
-    grid-area: texta;
-  }
-  .text2 {
-    grid-area: texta2;
-  }
-
-  .my-pic {
-    grid-area: img;
-    max-width: 12em;
-  }
-}
-
-/* what i can do */
-.box {
-  text-align: center;
-}
-.box > img {
-  max-width: 17em;
-}
-
-@media (min-width: 35em) {
-  .boxes {
-    margin: 2em 0;
-    display: flex;
-  }
-
-  .box {
     text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
-  .box + .box {
-    padding-left: 1em;
+  
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+    
   }
-  .box > img {
-    max-width: 10em;
-  }
+  
+
+
+    .hidden {
+        display: none; /* Hides the container */
+    }
+
+    .visible {
+        display: block; /* Shows the container */
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #f8f9fa;
+    }
+
+    #toggleButton {
+        margin-top: 20px; /* Space above the button */
+        margin-bottom:30%;
+    }
+    
+    .transparent-btn {
+        background-color: rgba(52, 58, 64, 0.8); /* Darkish transparent background */
+        color: white; /* White text */
+        border: none; /* Remove border */
+    }
+    
+    .transparent-btn:hover {
+        background-color: rgba(52, 58, 64, 1); /* Slightly less transparent on hover */
+    }
+    .hidden {
+      display: none;
+    }
+
+    .visible {
+      display: block;
+    }
+
+    .popup-container {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .info-section {
+        background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 600px; /* Optional: max width for the info section */
+        text-align: center;
+    }
+
+    .background-shade{
+        background-color: rgba(0, 0, 0, 0.3); /* Light transparent background */
+    padding: 20px;
+    border-radius: 16px; /* Rounded edges */
+    max-width: 600px; /* Optional: max width for the info section */
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Smooth shadow */
+    }
+
+    .box-shadow{
+        background-color: rgba(0, 0, 0, 0.3); /* Light transparent background */
+        padding: 20px;
+        border-radius: 16px; /* Rounded edges */
+        max-width: 600px; /* Optional: max width for the info section */
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Smooth shadow */
+    }
+
+.box-shadow:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
 }
 
-/*my projects */
-
-.projects {
-  background-color: black;
-}
-.project-grid > a > img {
-  max-width: 100%;
-}
-.projects > .container > h1 {
-  color: white;
-  text-align: center;
-  font-size: 2em;
-  font-weight: normal;
+.background-shade:hover{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */  
 }
 
-@media (min-width: 800px) {
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5em;
+.section-2 {
+  background-color: rgba(0, 0, 0, 0.1); /* Example background for section 2 */
+  padding: 50px 0; /* Space above and below the button */}
+
+
+  .text-deko{
+    text-decoration: none;
+    color:white;
   }
-  .project-grid > a > img {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1080px) {
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0.5em;
-  }
-
-  .project-grid > a > img {
-    max-width: 22em;
-  }
-}
-
-/*decoration boxes */
-
-.decoration {
-  display: none;
-}
-
-@media (min-width: 50em) {
-  .decoration {
-    display: block;
-  }
-  .boxes {
-    display: flex;
-    justify-content: center;
-  }
-
-  .box + .box {
-    margin-left: 6em;
-  }
-}
-
-/*footer */
-
-.footer {
-  text-align: center;
-  padding: 1em 0;
-  background-color: black;
-  color: white;
-}
