@@ -1,165 +1,231 @@
 /* Full-screen background styling */
 body, html {
-    background: url('1.jpeg') no-repeat center center/cover;
-    height: 100%;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    
-  }
+  background: url('1.jpeg') no-repeat center center/cover;
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures body stretches full height */
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
   body {
-    display: flex;
-    flex-direction: column;
+      background-color: black; /* Set background to black for mobile devices */
+      background-image: none; /* Disable image on mobile for better performance */
   }
-  .container {
-    flex: 1; /* Makes the main content area grow and push the footer down */
-  }
-  
-  /* Hero section background image */
+}
+
+.container {
+  flex: 1; /* Makes the main content area grow and push the footer down */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero section styling */
+.hero-section {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 3rem;
+}
+
+@media only screen and (max-width: 1200px) {
   .hero-section {
-    
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 3rem;
+      height: 60vh;
+      margin: 2rem;
   }
-  
-  /* Hero content styling */
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-section {
+      flex-direction: column;
+      height: auto;
+      margin: 1rem;
+  }
+}
+
+/* Hero content styling */
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 767px) {
   .hero-content h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    letter-spacing: 3px;
+      font-size: 2rem;
   }
-  
   .hero-content h2 {
-    font-size: 1.5rem;
-    font-weight: lighter;
-    letter-spacing: 2px;
+      font-size: 1.2rem;
   }
-  
+}
+
+/* Info Section */
+.info-section {
+  background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 1200px) {
   .info-section {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
+      padding: 40px 15px;
   }
-  
+}
+
+@media only screen and (max-width: 767px) {
+  .info-section {
+      padding: 30px 10px;
+  }
+}
+
+.highlight-text {
+  font-size: 1.8rem;
+  color: #33cc33;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
   .highlight-text {
-    font-size: 1.8rem;
-    color: #33cc33;
-    font-weight: bold;
+      font-size: 1.5rem;
   }
-  
+}
+
+.info-section p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
   .info-section p {
-    font-size: 1rem;
-    max-width: 800px;
-    margin: 20px auto;
+      font-size: 0.9rem;
+      max-width: 90%;
   }
-  
-  /* Footer */
-  .footer {
-    
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  
+}
+
+/* Footer - part of the background */
+.footer {
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: transparent; /* No background color */
+  backdrop-filter: blur(5px); /* Optional: Adds blur to footer text */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 767px) {
   .footer p {
-    margin: 0;
-    font-size: 1rem;
-    text-align: left;
-    
+      font-size: 0.9rem;
+      text-align: center;
   }
-  
-
-
-    .hidden {
-        display: none; /* Hides the container */
-    }
-
-    .visible {
-        display: block; /* Shows the container */
-        padding: 20px;
-        border: 1px solid #ccc;
-        background-color: #f8f9fa;
-    }
-
-    #toggleButton {
-        margin-top: 20px; /* Space above the button */
-        margin-bottom:30%;
-    }
-    
-    .transparent-btn {
-        background-color: rgba(52, 58, 64, 0.8); /* Darkish transparent background */
-        color: white; /* White text */
-        border: none; /* Remove border */
-    }
-    
-    .transparent-btn:hover {
-        background-color: rgba(52, 58, 64, 1); /* Slightly less transparent on hover */
-    }
-    .hidden {
-      display: none;
-    }
-
-    .visible {
-      display: block;
-    }
-
-    .popup-container {
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 20px;
-      border-radius: 16px;
-      max-width: 600px;
-      margin: 0 auto;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-    
-    .info-section {
-        background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 600px; /* Optional: max width for the info section */
-        text-align: center;
-    }
-
-    .background-shade{
-        background-color: rgba(0, 0, 0, 0.3); /* Light transparent background */
-    padding: 20px;
-    border-radius: 16px; /* Rounded edges */
-    max-width: 600px; /* Optional: max width for the info section */
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Smooth shadow */
-    }
-
-    .box-shadow{
-        background-color: rgba(0, 0, 0, 0.3); /* Light transparent background */
-        padding: 20px;
-        border-radius: 16px; /* Rounded edges */
-        max-width: 600px; /* Optional: max width for the info section */
-        text-align: center;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Smooth shadow */
-    }
-
-.box-shadow:hover {
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
 }
 
-.background-shade:hover{
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */  
+/* Popup and Button Containers */
+.hidden {
+  display: none; /* Hides the container */
 }
 
+.visible {
+  display: block; /* Shows the container */
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+}
+
+#toggleButton {
+  margin-top: 20px; /* Space above the button */
+  margin-bottom: 30%;
+}
+
+.transparent-btn {
+  background-color: rgba(52, 58, 64, 0.8); /* Darkish transparent background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+}
+
+.transparent-btn:hover {
+  background-color: rgba(52, 58, 64, 1); /* Slightly less transparent on hover */
+}
+
+/* Box Shadows */
+.background-shade, .box-shadow {
+  background-color: rgba(0, 0, 0, 0.3); /* Light transparent background */
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.box-shadow:hover, .background-shade:hover {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+@media only screen and (max-width: 767px) {
+  .background-shade, .box-shadow {
+      max-width: 90%; /* Make boxes responsive */
+      padding: 15px;
+  }
+}
+
+/* Section 2 */
 .section-2 {
   background-color: rgba(0, 0, 0, 0.1); /* Example background for section 2 */
-  padding: 50px 0; /* Space above and below the button */}
+  padding: 50px 0;
+}
 
-
-  .text-deko{
-    text-decoration: none;
-    color:white;
+@media only screen and (max-width: 767px) {
+  .section-2 {
+      padding: 30px 0;
   }
+}
+
+/* Text Decorations */
+.text-deko {
+  text-decoration: none;
+  color: white;
+}
+
+/* Additional General Responsiveness Adjustments */
+@media only screen and (max-width: 1200px) {
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .hero-section {
+      height: 50vh;
+  }
+  .hero-content h1 {
+      font-size: 1.8rem;
+  }
+  .hero-content h2 {
+      font-size: 1.3rem;
+  }
+}
