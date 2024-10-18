@@ -1,0 +1,186 @@
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #000;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh; /* Make sure the hero section takes the full height of the viewport */
+  background: url('1.png') no-repeat center center; /* Background image centered */
+  background-size: cover; /* Ensure the background covers the entire viewport */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+.hero p {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+}
+
+/* Moon Image (Positioned in the top-left with slide-in animation from left) */
+.moon-image {
+  position: absolute;
+  top: 20px;
+  left: -20vw; /* Start half off the screen on the left */
+  width: 150px; /* Size of the moon */
+  z-index: 1;
+  animation: slideInMoon 1.5s forwards; /* Slide-in animation from the left */
+  transition: transform 1.5s ease; /* Transition for hover effects */
+}
+
+/* Hover Effect for Moon: Pops up slightly on hover */
+.moon-image:hover {
+  transform: scale(1.1); /* Scale up to 110% on hover */
+}
+
+/* Slide-in animation for the moon */
+@keyframes slideInMoon {
+  0% {
+    left: -40vw; /* Start fully off-screen from the left */
+  }
+  100% {
+    left: -20vw; /* End with half the moon visible */
+  }
+}
+
+/* Astronaut Image (40vw with Hover Effect) */
+.astronaut-image {
+  position: absolute;
+  bottom: 0;
+  right: -20vw; /* Make the astronaut half off the screen */
+  width: 40vw; /* Set the astronaut width to 40% of the viewport */
+  z-index: 1;
+  animation: slideIn 1.5s forwards; /* Apply the slide-in animation */
+  transition: transform 1.5s ease; /* Transition for hover effects */
+}
+
+/* Hover Effect: Astronaut pops up slightly on hover */
+.astronaut-image:hover {
+  transform: scale(1.1); /* Scale up to 110% */
+}
+
+/* Keyframes for the astronaut slide-in animation */
+@keyframes slideIn {
+  0% {
+    right: -80vw; /* Start off-screen */
+  }
+  100% {
+    right: -20vw; /* End with half the astronaut visible */
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .moon-image {
+    width: 100px; /* Smaller moon size for tablets */
+    left: -30vw; /* Adjust starting position for tablets */
+    animation: slideInMoonSmall 1.5s forwards; /* Use slide-in animation for smaller screens */
+  }
+
+  @keyframes slideInMoonSmall {
+    0% {
+      left: -50vw; /* Start off-screen for smaller screens */
+    }
+    100% {
+      left: -15vw; /* End with part of the moon off-screen */
+    }
+  }
+
+  .astronaut-image {
+    width: 60vw; /* Adjust size for tablets */
+    right: -30vw; /* Adjust positioning for tablets */
+    animation: slideInSmall 1.5s forwards;
+  }
+
+  @keyframes slideInSmall {
+    0% {
+      right: -60vw; /* Start off-screen for small screens */
+    }
+    100% {
+      right: -30vw; /* End with part of the astronaut off-screen */
+    }
+  }
+
+  .hero h1 {
+    font-size: 48px; /* Adjust text size for tablets */
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    background-size: cover; /* Ensure the background covers the entire screen on small devices */
+    height: 100vh; /* Make sure the section takes the full height of the viewport */
+  }
+
+  .moon-image {
+    width: 80px; /* Further reduce moon size for phones */
+    left: -25vw; /* Adjust positioning for phones */
+    animation: slideInMoonXSmall 1.5s forwards; /* Slide-in animation for phones */
+  }
+
+  @keyframes slideInMoonXSmall {
+    0% {
+      left: -50vw; /* Start fully off-screen for extra small devices */
+    }
+    100% {
+      left: -10vw; /* End with part of the moon off-screen */
+    }
+  }
+
+  .astronaut-image {
+    width: 50vw; /* Adjust size for small phones */
+    right: -25vw; /* Adjust positioning for phones */
+    animation: slideInXSmall 1.5s forwards;
+  }
+
+  @keyframes slideInXSmall {
+    0% {
+      right: -50vw; /* Start off-screen for extra small devices */
+    }
+    100% {
+      right: -25vw; /* End with part of the astronaut off-screen */
+    }
+  }
+
+  .hero h1 {
+    font-size: 36px; /* Further reduce text size for phones */
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
+
+/* Footer Styles */
+footer .icon-text i {
+  background: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}

@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HS Sportmarketing & Management</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Outer Space</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<div class="container ">
-  
-  
-  <div class="hero-section text-center text-white">
-    <div class="container-fluid d-flex flex-column justify-content-center align-items-center hero-content background-shade">
-      <h1>HS SPORTMARKETING & MANAGEMENT SRO</h1>
-      <h2>WELCOME TO THE WORLD OF SPORT</h2>
-      <div class="d-flex justify-content-center">
-        <a class="text-deko btn btn-secondary box-shadow"href="about.html">About us</a>
+
+  <!-- Header Section with Responsive Navbar -->
+  <header class="bg-dark py-3">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand" href="#">Outer Space</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero position-relative text-center text-white d-flex align-items-center justify-content-center">
+    <!-- Background Images for Moon and Astronaut -->
+    <img src="moon.png" alt="Moon" class="moon-image position-absolute img-fluid">
+    <img src="33.png" alt="Astronaut" class="astronaut-image position-absolute img-fluid">
     
-  
-</div>
+    <!-- Hero Content -->
+    <div class="container hero-content">
+      <h1 class="display-1 fw-bold">OUTER SPACE.</h1>
+      <p class="lead mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum vitae lacus lobortis lacinia.</p>
+    </div>
+  </section>
 
- 
-</div>
-  <footer class="footer  text-white text-center py-3">
+  <!-- Footer Section -->
+  <footer class="bg-dark text-center py-3">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 box-shadow-2">
-          <p>HS Sportmarketing & Management sro<br>
-            Dunajska 8<br>
-            81108 Bratislava<br>
-            Slovakia</p>
-        </div>
-        <div class="col-md-4 box-shadow-2">
-          <p>Telefon: 0049 176 46508981<br>
-            Mail: hs-sportmarketing@web.de</p>
-        </div>
-        <div class="col-md-4 box-shadow-2">
-          <p>Media inquiries: 0049 176 46508981</p>
-        </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <i class="bi bi-search fs-4 text-white me-2"></i>
+        <span class="text-white">Outer Space</span>
       </div>
     </div>
-</footer>
+  </footer>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
