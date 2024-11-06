@@ -217,7 +217,7 @@ a:hover {
     
     position: absolute;
     bottom: 90px; /* Adjust distance from the bottom */
-    right: 30px; /* Adjust distance from the right */
+    right: 5px; /* Adjust distance from the right */
     max-width: 900px; /* Adjust width as needed */
     color: #c0c0c0;
     padding: 20px;
