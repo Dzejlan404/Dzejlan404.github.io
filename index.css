@@ -12,8 +12,36 @@
     color: #fff;
 }
 
+/* General body styling */
+body {
+    background-color: #121212; /* Dark background */
+    color: #f8f9fa;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
 /* Centered text box with transparent black background */
 .text-box {
+   
+    color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); /* Darker shadow for more depth */
+    backdrop-filter: blur(8px); /* Adds a soft blur effect */
+}
+
+.text-box-small {
     background: rgba(0, 0, 0, 0.2); /* Lighter transparent black */
     color: #fff;
     padding: 40px;
@@ -25,6 +53,7 @@
     backdrop-filter: blur(8px); /* Adds a soft blur effect */
 }
 
+/* Larger text box with additional padding */
 .text-box-big {
     background: rgba(0, 0, 0, 0.2); /* Lighter transparent black */
     color: #fff;
@@ -37,8 +66,6 @@
     margin-bottom: 10px;
 }
 
-
-
 /* Centered Navbar styling */
 .navbar {
     background: rgba(0, 0, 0, 0.2); /* Lighter transparent black */
@@ -49,7 +76,6 @@
     text-align: center;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); /* Darker shadow */
     backdrop-filter: blur(8px); /* Adds a soft blur effect */
-    
 }
 
 .navbar .nav-link {
@@ -76,16 +102,7 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Footer styling */
-.footer {
-    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-
+/* Custom button style */
 .button-custom {
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
     color: #fff; /* White text */
@@ -103,3 +120,113 @@
     border-color: rgba(255, 255, 255, 0.5); /* Slightly brighter border on hover */
     color: #fff;
 }
+
+/* Footer styling */
+.
+
+/* Footer links styling */
+a {
+    color: #f8f9fa; /* Light link color */
+    text-decoration: none;
+}
+
+a:hover {
+    transform: translateY(-1mm); /* Moves the link up by 1mm */
+    transition: transform 0.2s ease, font-size 0.2s ease; /* Smooth transition */
+}
+
+
+
+/* Contact info box */
+.contact-info {
+    color: #f8f9fa;
+    border-left: 5px solid #0066cc;
+    padding: 20px;
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    color: #0066cc;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #0066cc;
+    width: 20px;
+    text-align: center;
+}
+
+/* Terms and conditions styling */
+.terms-and-conditions {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.terms-and-conditions h1 {
+    color: #0066cc;
+}
+
+.terms-and-conditions h2 {
+    color: #009933;
+}
+
+.terms-and-conditions .contact-info {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Container card styling */
+.container_card {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #a10505; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #555; /* Gray text color */
+    box-shadow: 0 4px 8px rgba(67, 207, 67, 0.1); /* Subtle shadow */
+}
+
+/* Ensure the parent container is positioned relative */
+.position-relative {
+    position: relative;
+}
+
+/* Position the welcome message container in the bottom-right corner */
+.welcome-container {
+    
+    position: absolute;
+    bottom: 60px; /* Adjust distance from the bottom */
+    right: 80px; /* Adjust distance from the right */
+    max-width: 900px; /* Adjust width as needed */
+    color: #c0c0c0;
+    padding: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    }
+
+
+    .welcome-container h2 {
+        color: #c0c0c0; /* Silver color for text */
+        font-size: 2em; /* Increase font size to make it roughly twice as large */
+    }    
