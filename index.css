@@ -217,7 +217,7 @@ a:hover {
     
     position: absolute;
     bottom: 60px; /* Adjust distance from the bottom */
-    right: 80px; /* Adjust distance from the right */
+    right: 60px; /* Adjust distance from the right */
     max-width: 900px; /* Adjust width as needed */
     color: #c0c0c0;
     padding: 20px;
@@ -226,7 +226,9 @@ a:hover {
     }
 
 
-    .welcome-container h2 {
+.welcome-container h2 {
         color: #c0c0c0; /* Silver color for text */
         font-size: 2em; /* Increase font size to make it roughly twice as large */
     }    
+
+
